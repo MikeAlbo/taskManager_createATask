@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html> <!-- add ng-app -->
+<html ng-app="taskItApp"> 
     <head>
         
         <!-- meta -->
@@ -18,7 +18,8 @@
         <script src="bower_components/angular/angular.js"></script>
         
         <!-- load modules -->
-        
+        <script type="application/javascript" src="angular/main.js"></script>
+        <script type="application/javascript" src="angular/controlers/mainCtrl.js"></script>
         
         
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -28,8 +29,22 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     </head>
-    <body> <!-- add ng-controller -->
+    <body ng-controller="mainCtrl"> 
+        
+        <!-- include navbar -->
+        <ng-include src="'views/navbar.html'"></ng-include>
+        
+        <div class="row">
+            <div class="col-xs-12" id="top-half"></div> <!-- quick add, detailed view -->
+            <div class="col-xs-12" id="bottom-half"></div> <!-- list view --> 
+        </div>
     
+        
+        
+        
+        
+        
+        
         <!-- load jQuery and Bootstrap.js -->
         <!-- load jQuery -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
