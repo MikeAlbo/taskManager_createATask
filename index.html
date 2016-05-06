@@ -14,6 +14,15 @@
         <!-- import bootstrap -->
         <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         
+        <!-- import fontAwesome -->
+        <link type="text/css" rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+        
+        <!-- import Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css"/>
+        
+        <!-- load custom CSS -->
+        <link type="text/css" rel="stylesheet" href="css/custom.css">
+        
         <!-- import angular frameworks -->
         <script src="bower_components/angular/angular.js"></script>
         
@@ -34,11 +43,22 @@
         <!-- include navbar -->
         <ng-include src="'views/navbar.html'"></ng-include>
         
-        <div class="row">
-            <div class="col-xs-12" id="top-half"></div> <!-- quick add, detailed view -->
-            <div class="col-xs-12" id="bottom-half"></div> <!-- list view --> 
-        </div>
-    
+        
+            <div class="row">
+                
+                <div class="hidden-xs col-sm-2 col-sm-offset-1" id="sidePanel">
+                    <ng-include src="'views/filterPanel.html'"></ng-include>
+                </div>
+                
+                <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1" id="mainPanel">
+                    <ng-include src="'views/taskPanel.html'"></ng-include>
+                </div>
+            
+                
+                
+            </div>
+        
+            
         
         
         
